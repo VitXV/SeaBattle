@@ -8,7 +8,7 @@ using namespace std;
 struct cell
 {
     char value = '.';
-    bool hidden = true; // false для отладки
+    bool hidden = true; // false РґР»СЏ РѕС‚Р»Р°РґРєРё
 };
 
 void ShowFields(cell field[12][12], cell enemyfield[12][12])
@@ -331,9 +331,9 @@ int main()
 
     cell enemyfield[12][12];
 
-    cout << "----- Морской бой -----" << endl;
+    cout << "----- РњРѕСЂСЃРєРѕР№ Р±РѕР№ -----" << endl;
     cout << endl;
-    cout << "На данный момент доступно только случайное расположение кораблей, введи r чтобы начать. ";
+    cout << "РќР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ РґРѕСЃС‚СѓРїРЅРѕ С‚РѕР»СЊРєРѕ СЃР»СѓС‡Р°Р№РЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєРѕСЂР°Р±Р»РµР№, РІРІРµРґРё r С‡С‚РѕР±С‹ РЅР°С‡Р°С‚СЊ. ";
     char start = ' ';
     while (start != 'r')
         cin >> start;
@@ -345,7 +345,7 @@ int main()
 
     char q = 'n'; // quit
 
-    // Ввод
+    // Р’РІРѕРґ
     char c;
     int x;
     int y;
@@ -379,7 +379,7 @@ int main()
                 ShowFields(field, enemyfield);
                 do
                 {
-                    cout << endl << "   Ваш ход: ";
+                    cout << endl << "   Р’Р°С€ С…РѕРґ: ";
                     cin >> c >> x;
 
                     if (!cin)
@@ -410,7 +410,7 @@ int main()
                     alive -= 1;
                 turn += changing;
                 if (changing != 0)
-                    cout << "   Бот сходил " << (char)(y+96) << " " << x << endl << endl;
+                    cout << "   Р‘РѕС‚ СЃС…РѕРґРёР» " << (char)(y+96) << " " << x << endl << endl;
             }
         }
 
@@ -432,4 +432,5 @@ int main()
             cin >> q;
     }
     return 0;
+
 }
